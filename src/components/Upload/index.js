@@ -8,7 +8,7 @@ class App extends Component {
     if(!isDragActive) {
       return <UploadMessage>Arraste arquivos aqui ...</UploadMessage>
     }
-    if(!isDragReject) {
+    if(isDragReject) {
       return <UploadMessage type="error">Arquivo não suportado</UploadMessage>
     }
   
@@ -18,7 +18,7 @@ class App extends Component {
 
   render(){
     return (
-      <Dropzone accept="image/*"onDropAccepted={() => {}}>
+      <Dropzone accept="image/*" onDropAccepted={() => {}}>
   
         {({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
             <DropContainer  
