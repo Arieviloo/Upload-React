@@ -14,7 +14,7 @@ class App extends Component {
   
     return <UploadMessage type="success">Solte o arquivo</UploadMessage>
   
-  }
+  };
 
   render(){
     return (
